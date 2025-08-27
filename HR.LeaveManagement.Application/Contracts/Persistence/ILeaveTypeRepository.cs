@@ -7,4 +7,3 @@ namespace HR.LeaveManagement.Application.Contracts.Persistence
         Task<bool> IsLeaveTypeUnique(string name);
     }
 }
- 
