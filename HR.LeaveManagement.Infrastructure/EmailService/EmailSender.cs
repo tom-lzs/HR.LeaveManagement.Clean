@@ -33,8 +33,7 @@ namespace HR.LeaveManagement.Infrastructure.EmailService
 
             var response = await client.SendEmailAsync(message);
 
-            return response.StatusCode == System.Net.HttpStatusCode.OK || 
-                   response.StatusCode == System.Net.HttpStatusCode.Accepted;
+            return response.IsSuccessStatusCode;
         }
     }
 }
