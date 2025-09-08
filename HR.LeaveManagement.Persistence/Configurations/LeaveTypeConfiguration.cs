@@ -20,8 +20,8 @@ namespace HR.LeaveManagement.Persistence.Configurations
                     Id = 1,
                     Name = "Vacation",
                     DefaultDays = 7,
-                    DateCreated = DateTime.Now,
-                    DateModified = DateTime.Now,
+                    DateCreated = new DateTime(2025, 9, 8, 22, 19, 51, 967, DateTimeKind.Local),
+                    DateModified = new DateTime(2025, 9, 8, 22, 19, 51, 967, DateTimeKind.Local),
                 });
 
             builder.Property(q => q.Name)

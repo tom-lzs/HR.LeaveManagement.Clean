@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="15.0.1" />
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
     <PackageReference Include="FluentValidation" Version="12.0.0" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.0.0" />
@@ -16,6 +16,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HR.LeaveManagement.Domain\HR.LeaveManagement.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\LeaveAllocation\Commands\CreateLeaveAllocation\" />
+    <Folder Include="Features\LeaveAllocation\Commands\DeleteLeaveAllocation\" />
+    <Folder Include="Features\LeaveAllocation\Commands\UpdateLeaveAllocation\" />
+    <Folder Include="Features\LeaveRequest\" />
   </ItemGroup>
 
 </Project>
