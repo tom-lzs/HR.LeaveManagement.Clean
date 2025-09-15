@@ -4,7 +4,7 @@ using HR.LeaveManagement.Application.Features.LeaveAllocation.Commands.DeleteLea
 using HR.LeaveManagement.Application.Features.LeaveAllocation.Commands.UpdateLeaveAllocation;
 using HR.LeaveManagement.Application.Features.LeaveAllocation.Query.GetLeaveAllocationDetails;
 using HR.LeaveManagement.Application.Features.LeaveAllocation.Query.GetLeaveAllocations;
-    using MediatR;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
