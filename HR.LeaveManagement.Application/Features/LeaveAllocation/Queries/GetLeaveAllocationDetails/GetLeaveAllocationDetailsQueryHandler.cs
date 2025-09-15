@@ -25,18 +25,9 @@ namespace HR.LeaveManagement.Application.Features.LeaveAllocation.Query.GetLeave
 
         public async Task<LeaveAllocationDetailsDto> Handle(GetLeaveAllocationDetailsQuery request, CancellationToken cancellationToken)
         {
-            //Query the DB
-            var LeaveAllocation = await _leaveAllocationRepository.GetByIdAsync(request.Id);
+            var LeaveAllocation = await _leaveAllocationRepository.GetLeaveAllocationWithDetails(request.Id);
 
-            //Verify if exists
-            if (LeaveAllocation == null)
-                throw new NotFoundException(nameof(LeaveAllocation), request.Id);
-
-            //Convert to DTO
-            var data = _mapper.Map<LeaveAllocationDetailsDto>(LeaveAllocation);
-
-            //Return the DTO
-            return data;
+            return _mapper.Map<LeaveAllocationDetailsDto>(LeaveAllocation);
         }
     }
 }
