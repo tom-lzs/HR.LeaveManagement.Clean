@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FluentValidation;
+using HR.LeaveManagement.Application.Features.LeaveRequest.Commands.ChangeLeaveRequestApproval;
 
-namespace HR.LeaveManagement.Application.Features.LeaveRequest.Commands.ChangeLeaveRequestApproval
+namespace HR.LeaveManagement.Application.DTOs.LeaveRequest.Validators;
+
+public class ChangeLeaveRequestApprovalCommandValidator : AbstractValidator<ChangeLeaveRequestApprovalCommand>
 {
-    internal class ChangeLeaveRequestApprovalCommandValidator
+    public ChangeLeaveRequestApprovalCommandValidator()
     {
+        RuleFor(p => p.Approved)
+            .NotNull()
+            .WithMessage("Approval status cannot be null");
     }
 }

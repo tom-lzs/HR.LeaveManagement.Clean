@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace HR.LeaveManagement.Application.Features.LeaveRequest.Commands.CancelLeaveRequest
 {
-    internal class CancelLeaveRequestCommand : IRequest<Unit>
+    public class CancelLeaveRequestCommand : IRequest<Unit>
     {
+        public int Id { get; set; }
     }
 }
